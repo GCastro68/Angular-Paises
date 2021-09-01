@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Country } from '../../interfaces/pais.interface';
-import { CapitalService } from '../../services/capital.service';
+import { PaisService } from '../../services/pais.service';
 
 @Component({
   selector: 'app-por-capital',
@@ -12,7 +12,7 @@ export class PorCapitalComponent {
   hayError: boolean = false;
   paises: Country[] = [];
 
-  constructor(private CapitalService: CapitalService) {}
+  constructor(private CapitalService: PaisService) {}
 
   buscar(termino: string) {
     this.hayError = false;
